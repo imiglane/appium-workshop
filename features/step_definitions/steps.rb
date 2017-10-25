@@ -31,5 +31,15 @@ Given /^I am on welcome screen$/ do
   if $driver.find_elements(:xpath, '//android.widget.Button[contains(@text, "OK")]').any?
     $driver.alert_accept
   end
-  sleep(4)
+  
+  $driver.find_elements(:id, 'main_row_text')
+  $driver.find_element(:xpath, '//android.widget.TextView[contains(@text, "Transports")]').click
+  $driver.find_elements(:id, 'category_name')
+  print $driver.find_element(:xpath, '//android.widget.TextView[contains(@text, "Vieglie auto")]').text
+  $driver.back
+  $driver.find_element(:xpath, '//android.widget.ImageButton')
+  $driver.find_element(:xpath, '//android.widget.ImageButton').click
+  $driver.find_elements(:id, 'item_name')
+  $driver.find_element(:xpath, '//android.widget.TextView[contains(@text, "Meklēšanas filtri")]').click
+  sleep(6)
 end
