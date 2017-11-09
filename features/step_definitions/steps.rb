@@ -31,6 +31,22 @@ Given /^I open on Transports category$/ do
     @pages.page_create_filter.open_category("Transports")
 end
 
-Given /^I open sub cat Vieglie auto/ do
+Given /^I open sub cat Vieglie auto$/ do
   @pages.page_sub_category.open_sub_category("Vieglie auto")
+end
+
+Given /^I open sub cat Brand$/ do
+  @pages.page_sub_auto.open_sub_auto("Audi")
+end
+
+Given /^I open sub cat Model$/ do
+  @pages.page_sub_model.open_sub_model("Audi S4")
+end
+
+Given /^I open sub cat Action$/ do
+  @pages.page_sub_action.open_sub_action("Visi")
+end
+
+Given /^I open sub cat Parameter/ do
+  @pages.page_sub_parameter.click_in_field
 end
