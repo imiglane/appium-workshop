@@ -2,9 +2,16 @@ Feature: 1. Filter feature
 
 Scenario: Signup
     Given I am on create filter page
-    When I open on Transports category
-    When I open sub cat Vieglie auto
-    When I open sub cat Brand
-    When I open sub cat Model
-    When I open sub cat Action
-    Then I open sub cat Parameter
+    When I open filter params
+    Then I submit filter
+
+Scenario: Empty_filter
+    Given I am on buy page
+    When I open filter params
+    Then I submit empty filter
+
+Scenario: Open_settings
+    Given I am on buy page
+    When I open menu
+    Then I open Settings
+    Then I press Settings

@@ -23,30 +23,31 @@
 
 
 Given /^I am on create filter page$/ do
- @pages.page_intro.close_intro_if_visible
- @pages.page_create_filter.visible?
+  @tests.filters_test.close_intro
+end
+Given /^I open filter params$/ do
+  @tests.filters_test.open_filter_params
 end
 
-Given /^I open on Transports category$/ do
-    @pages.page_create_filter.open_category("Transports")
+Given /^I submit filter/ do
+  @tests.filters_test.submit_filter
 end
 
-Given /^I open sub cat Vieglie auto$/ do
-  @pages.page_sub_category.open_sub_category("Vieglie auto")
+Given /^I am on buy page$/ do
+  @tests.filters_test.close_buy
+end
+Given /^I submit empty filter/ do
+  @tests.filters_test.submit_empty_filter
 end
 
-Given /^I open sub cat Brand$/ do
-  @pages.page_sub_auto.open_sub_auto("Audi")
+Given /^I open menu$/ do
+  @tests.settings_test.open_menu
 end
 
-Given /^I open sub cat Model$/ do
-  @pages.page_sub_model.open_sub_model("Audi S4")
+Given /^I open Settings$/ do
+  @tests.settings_test.open_menu
 end
 
-Given /^I open sub cat Action$/ do
-  @pages.page_sub_action.open_sub_action("Visi")
-end
-
-Given /^I open sub cat Parameter/ do
-  @pages.page_sub_parameter.click_in_field
+Given /^I press Settings$/ do
+  @tests.settings_test.press_settings
 end
