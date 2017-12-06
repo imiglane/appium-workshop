@@ -2,6 +2,7 @@ class IntroPage < BasePage
   def initialize
     @button_close_intro = Element.new(:id, 'close_intro')
     @button_close_alert_ok = Element.new(:xpath, '//android.widget.Button[contains(@text, "OK")]')
+    
   end
 
   def visible?

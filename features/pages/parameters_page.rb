@@ -25,7 +25,7 @@ class ParametersPage < BasePage
   def set_parameter(name, left_param, right_param)
       @frame_parameter.list.each do |element|
         sub_element =   element.find_element(@title_parameter_name.value[:type], @title_parameter_name.value[:value])
-      
+
       if sub_element.text == name
         print sub_element.text
         element.find_element(@input_parameter_left.value[:type], @input_parameter_left.value[:value]).send_keys left_param
@@ -35,6 +35,7 @@ class ParametersPage < BasePage
     end
     self.hide_keyboard
   end
+  
 
   def save_filter
     @button_apply.click

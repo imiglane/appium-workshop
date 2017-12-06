@@ -39,7 +39,9 @@ end
 Given /^I submit empty filter/ do
   @tests.filters_test.submit_empty_filter
 end
-
+Given /^I check if its not saved/ do
+  @tests.filters_test.verify_not_saved
+end
 Given /^I open menu$/ do
   @tests.settings_test.open_menu
 end

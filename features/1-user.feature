@@ -9,6 +9,7 @@ Scenario: Empty_filter
     Given I am on buy page
     When I open filter params
     Then I submit empty filter
+    Then I check if its not saved
 
 Scenario: Open_settings
     Given I am on buy page

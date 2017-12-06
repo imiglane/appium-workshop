@@ -16,7 +16,7 @@ end
 options = {
   'port' => 5500,
   'portboot' => 5051,
-  'sn' => '10160a32145e3f02',
+  'sn' => 'LGK3505TZPHE99',
   'app' => 'app.apk',
   'appPackage' => 'com.testdevlab.notifyus'
 }
@@ -43,6 +43,7 @@ end
 
 Before do
   @pages = Pages.new
+  @tests = Tests.new @pages
   $driver.start_driver
 end
 After do
