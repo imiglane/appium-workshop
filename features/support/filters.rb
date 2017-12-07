@@ -8,6 +8,27 @@ module Filters
     )
     @transports
   end
+  def Filters.vakances
+    @vakances ||= Filter.new(
+      cat: 'Vakances',
+      sub_cats: ["Aģents"]
+  )
+    @vakances
+  end
+  def Filters.property
+    @property ||= Filter.new(
+      cat: 'Nekustamie īpašumi',
+      sub_cats: ["Dzīvokļi", "Rīga", "Centrs", "Izīrē"],
+      params: [Hash['name' => 'STĀVI', 'left' => '2', 'right' => '5']]
+  )
+    @property
+  end
+  def Filters.searchfilter
+    @searchfilter ||= Filter.new(
+      cat: 'Meklēšanas filtri'
+  )
+    @searchfilter
+  end
 end
 
 class Filter

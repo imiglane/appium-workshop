@@ -25,12 +25,31 @@
 Given /^I am on create filter page$/ do
   @tests.filters_test.close_intro
 end
-
-
 Given /^I open filter params$/ do
   @tests.filters_test.open_filter_params
 end
-
 Given /^I submit filter/ do
-  @tests.filters_test.submit_filter
+  @tests.filters_test.submit_vacancy
+end
+
+Given /^I close buy page/ do
+  @tests.filters_test.close_buy_more
+end
+
+Given /^I open menu/ do
+  @tests.filters_test.open_menu
+end
+Given /^I open saved filtres page/ do
+  @tests.filters_test.open_search_filtres
+end
+
+Given /^I open saved filter/ do
+  @tests.filters_test.open_saved_filter
+end
+
+Given /^I open property params$/ do
+  @tests.filters_test.open_property_params
+end
+Given /^I open vacancy params$/ do
+  @tests.filters_test.open_vacancy_params
 end
