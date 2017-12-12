@@ -2,18 +2,17 @@ class MenuPage < BasePage
   def initialize
     @filter = Element.new(:class_name, 'android.widget.ImageView')
     @menu = Element.new(:class_name, 'android.widget.ImageButton')
-    @filtres_category = ElementGroup.new(:xpath, '//android.widget.TextView[contains(@text, "Meklēšanas filtri")]')
+    @menu_options = ElementGroup.new(:id, 'item_name')
   end
 
   def visible?
     @filter.visible?
-    @filtres_category.visible?
   end
 
   def click
      @menu.click
    end
   def open_search_filtres(name)
-    @filtres_category.click_by_text(name)
+      @menu_options.click_by_text(name)
   end
 end

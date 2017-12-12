@@ -61,19 +61,29 @@ class FilterTest
     set_vacancy_params
     @pages.page_paremeters.save_filter
   end
+  def submit_property
+    set_property_params
+    @pages.page_paremeters.save_filter
+  end
 
-  def close_buy_more 
+  def close_buy_more
     @pages.page_buy.close_buy_if_visible
   end
+
   def open_menu
     @pages.page_menu.click
   end
 
-  def open_search_filtr("Meklēšanas filtri")
-    @pages.page_menu.open_search_filtres
+  def open_search_filtre
+    @pages.page_menu.open_search_filtres(@filters.searchfilter.cat)
   end
 
   def open_saved_filter
-    @pages.page_saved_filtres.open_sub_category
+    @pages.page_saved_filtres.open_sub_category('Neierobežots termiņš')
   end
+  def delete_filter
+    @pages.page_filter.delete
+  end
+
+
 end

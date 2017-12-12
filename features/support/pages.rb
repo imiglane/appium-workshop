@@ -32,4 +32,8 @@ class Pages
     @page_saved_filtres ||= SavedFiltresPage.new
     @page_saved_filtres
   end
+  def page_filter
+    @page_filter ||= FiltrePage.new
+    @page_filter
+  end
 end

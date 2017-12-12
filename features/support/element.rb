@@ -15,7 +15,9 @@ class Element
   def click
     $driver.find_element(@value[:type], @value[:value]).click
   end
-
+  def refresh
+    $driver.navigate().refresh()
+  end
   def send_keys(keys)
     $driver.find_element(@value[:type], @value[:value]).send_keys(keys)
   end
